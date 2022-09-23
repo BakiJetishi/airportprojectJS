@@ -1478,6 +1478,10 @@ footer .footer2 a:hover {
     font-size: 40px;
   }
 
+  main #section5 {
+    width: 90%;
+    margin: 0 20px;
+  }
   main #section5 .title h1 {
     font-size: 18px;
   }
@@ -1487,8 +1491,8 @@ footer .footer2 a:hover {
     height: 2px;
   }
 
-  main #section5 .news-cards img {
-    max-width: 190px;
+  main #section5 .news-card img {
+    width: 190px;
   }
 
   main #section5 .news-card {
@@ -1536,11 +1540,6 @@ footer .footer2 a:hover {
     height: 50px;
     font-size: 18px;
   }
-  .livechat {
-    position: fixed;
-    right: 15px;
-    bottom: 45px;
-  }
 
   .livechat-textcontent {
     width: 310px;
@@ -1555,11 +1554,6 @@ footer .footer2 a:hover {
   .backtotop {
     width: 50px;
     height: 50px;
-  }
-
-  .show--button {
-    right: 75px;
-    bottom: 45px;
   }
 
   .cookie-btn {
