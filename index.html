@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Airport Project</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' href='./assets/css/style.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+
+<body class="overflow">
+    <div id="backtotop"></div>
+    <header>
+        <nav class="navbar">
+            <div class="wrapper">
+                <div class="nav__logo">
+                    <a class="nav--logo" href="index.html">AIRPORT</a>
+                </div>
+                <div class="nav__links">
+                    <ul>
+                        <li><a class="nav__link" href="#">Flights</a></li>
+                        <li><a class="nav__link" href="#">Passager Guide</a></li>
+                        <li><a class="nav__link" href="#">At the Airport</a></li>
+                        <li><a class="nav__link" href="#">Transport & Directions</a></li>
+                    </ul>
+                </div>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="header2">
+            <div class="container">
+                <div class="text">
+                    <h2>Welcome to</h2>
+                    <h1>International Airport</h1>
+                </div>
+                <div class="searchinput">
+                    <a href="#" class="arrival__button active__input"><i
+                            class="fa-solid fa-plane-arrival"></i>ARRIVAL</a>
+                    <a href="#" class="departure__button"><i class="fa-solid fa-plane-departure"></i>DEPARTURE</a>
+                    <form class="arrival active">
+                        <input type="text" placeholder="Arriving flights">
+                        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                    <form class="departure">
+                        <input type="text" placeholder="Departing flights">
+                        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+
+                </div>
+            </div>
+            <form class="searchflights">
+                <h1>Book a flight</h1>
+                <div class="radio">
+                    <input type="radio" id="oneway" name="way">
+                    <label for="oneway">One Way</label>
+                </div>
+                <div class="radio">
+                    <input type="radio" id="roundtrip" name="way">
+                    <label for="roundtrip">Round trip</label>
+                </div>
+                <div>
+                    <label for="from">From</label>
+                    <input type="text" id="from" placeholder="Any city" value="Lorem, ipsum">
+                </div>
+                <div>
+                    <label for="to">To</label>
+                    <input id="to" type="text" placeholder="Any city">
+                </div>
+                <div>
+                    <label for="depart">Depart</label>
+                    <input id="depart" type="date">
+                </div>
+                <div>
+                    <label for="return">Return</label>
+                    <input id="return" type="date">
+                </div>
+                <select class="adults">
+                    <option value="adults">Adults</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <select class="childrens">
+                    <option value="children">Children</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <button class="bookapartment" type="submit">Search flights</button>
+            </form>
+            <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+            <div class="dots">
+            </div>
+        </div>
+    </header>
+    <div class="line"></div>
+    <main>
+        <section id="section1">
+            <a href="#" class="checkin">
+                <img src="./assets/images/checkinicon.png" alt="">
+                <div class="text">
+                    <h3>Check In</h3>
+                    <p>Lorem, ipsum dolor.</p>
+                </div>
+            </a>
+            <a href="#" class="transportation">
+                <img src="./assets/images/transportationicon.png" alt="">
+                <div class="text">
+                    <h3>Transportation</h3>
+                    <p>Lorem, ipsum dolor.</p>
+                </div>
+            </a>
+            <a href="#" class="services">
+                <img src="./assets/images/servicesicon.png" alt="">
+                <div class="text">
+                    <h3>Services</h3>
+                    <p>Lorem, ipsum dolor.</p>
+                </div>
+            </a>
+            <a href="#" class="parking">
+                <img src="./assets/images/parkingicon.png" alt="">
+                <div class="text">
+                    <h3>Car Parking</h3>
+                    <p>Lorem, ipsum dolor.</p>
+                </div>
+            </a>
+        </section>
+        <div class="line"></div>
+        <section id="section2">
+            <h1 class="reveal--onscroll">Enjoy your airport experience</h1>
+            <div class="cards reveal--onscroll">
+                <div class="card">
+                    <p>Lounges</p>
+                    <img src="./assets/images/lounge.jpg" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    <a href="#">Read More</a>
+                </div>
+                <div class="card">
+                    <p>Shopping</p>
+                    <img src="./assets/images/shop.jpg" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    <a href="#">Read More</a>
+                </div>
+                <div class="card">
+                    <p>Food and Beverage</p>
+                    <img src="./assets/images/restaurant.jpg" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+        </section>
+        <div class="line"></div>
+        <section id="section3">
+            <div class="currency">
+                <a href="#">
+                    <h3><span>Need</span>CURRENCY ?</h3>
+                    <img src="./assets/images/currency.jpg" alt="">
+                    <h1>Exchange Information</h1>
+                </a>
+            </div>
+            <div class="hotel">
+                <a href="#">
+                    <h3><span>Need</span>SOME REST ?</h3>
+                    <img src="./assets/images/hotel.jpg" alt="">
+                    <h1>Get a 5-star Hotel</h1>
+                </a>
+            </div>
+            <div class="car">
+                <a href="#">
+                    <h3><span>Need</span>A CAR ?</h3>
+                    <img src="./assets/images/car.jpg" alt="">
+                    <h1>Rent a Car</h1>
+                </a>
+            </div>
+            <div class="pyramids">
+                <a href="#">
+                    <h3><span>CULTURE</span>LIFESTYLE</h3>
+                    <img src="./assets/images/pyramids.jpg" alt="">
+                    <h1>Lorem, ipsum dolor.</h1>
+                    <div class="line"></div>
+                </a>
+            </div>
+        </section>
+        <div class="line"></div>
+        <section id="section4">
+            <div class="h1 reveal--onscroll">
+                <h1>Airport Facilities</h1>
+            </div>
+            <div class="wrapper reveal--onscroll">
+                <div class="facilities">
+                    <a href="#">
+                        <i class="far fa-calendar-alt"></i>
+                        <p>Events</p>
+                    </a>
+                    <a href="#">
+                        <i class="far fa-newspaper"></i>
+                        <p>Media Center</p>
+                    </a>
+                    <a href="#">
+                        <i class="fas fa-bus"></i>
+                        <p>Move From / To Airport</p>
+                    </a>
+                    <a href="#">
+                        <i class="fas fa-briefcase-medical"></i>
+                        <p>Medical Facilities</p>
+                    </a>
+                    <a href="#">
+                        <i class="fas fa-train" ~></i>
+                        <p>Auto Train</p>
+                    </a>
+                    <a href="#">
+                        <i class="fas fa-bed"></i>
+                        <p>Hotels</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section id="section5">
+            <div class="title reveal--onscroll">
+                <h1>Latest publications</h1>
+            </div>
+            <div class="news-cards reveal--onscroll">
+                <!-- Created from Javascript -->
+                <!-- <div class="news-card">
+                    <img src="./assets/images/img5.jpg" alt="">
+                    <a href="#" class="text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, nobis.</p>
+                    </a>
+                </div>  -->
+            </div>
+            <button class="prev-btn "><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="next-btn"><i class="fa-solid fa-arrow-right"></i></button>
+        </section>
+    </main>
+    <footer>
+        <div class="footer1bgcolor">
+            <div class="footer1">
+                <div class="logo">
+                    <h1>Internation Airport</h1>
+                </div>
+                <div class="socialmedia">
+                    <a href="#"><i class="fa-brands fa-twitter" style="color: #1DA1F2;"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f" style="color: #3b5998;"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram" style="color: #fb3958;"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in" style="color: #0072b1;"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube" style="color: #FF0000;"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer2bgcolor">
+            <div class="footer2">
+                <div class="flights">
+                    <h2>Flights</h2>
+                    <ul>
+                        <li><a href="#">Arivals</a></li>
+                        <li><a href="#">Departures</a></li>
+                        <li><a href="#">Airline</a></li>
+                    </ul>
+                </div>
+                <div class="transport">
+                    <h2>Transport</h2>
+                    <ul>
+                        <li><a href="#">By Taxi</a></li>
+                        <li><a href="#">By Bus</a></li>
+                        <li><a href="#">By Car</a></li>
+                        <li><a href="#">Car Rentals</a></li>
+                    </ul>
+                </div>
+                <div class="airport">
+                    <h2>At the Airport</h2>
+                    <ul>
+                        <li><a href="#">Shops</a></li>
+                        <li><a href="#">Bars & restaurants</a></li>
+                        <li><a href="#">Financial services</a></li>
+                    </ul>
+                </div>
+                <div class="company">
+                    <h2>Company</h2>
+                    <ul>
+                        <li><a href="#">Latest News</a></li>
+                        <li><a href="#">Company</a></li>
+                        <li><a href="#">Lorem</a></li>
+                        <li><a href="#">Lorem</a></li>
+                    </ul>
+                </div>
+                <div class="languages">
+                    <h2>Languages</h2>
+                    <ul>
+                        <li><a href="#">English</a></li>
+                        <li><a href="#">Shqip</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="livechat">
+        <div class="livechat-icon">
+            <i class="fa-regular fa-comment"></i>
+        </div>
+        <div class="livechat-textcontent">
+            <div class="livechat-header">
+                <div class="livechat-profile">
+                    <h4 class="livechat-name">John Doe</h4>
+                    <p class="livechat-status">online</p>
+                </div>
+            </div>
+            <div class="livechat-content">
+                <h4 class="no-message">You don't have message yet!</h4>
+            </div>
+            <div class="livechat-footer">
+                <form>
+                    <input type="text" maxlength="20" placeholder="Type message..."></input>
+                    <button>Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <a href="#backtotop" class="backtotop"><i class="fas fa-chevron-up"></i></a>
+    <div class="copyright">
+        <p>&copy; 2022 - Airport Company All Rights Reserved</p>
+    </div>
+
+    <div class="overlay"></div>
+
+    <div class="cookie-container">
+        <p>We use cookies in this website to give you the best experience on our
+            site. To find out more, read our
+            <a href="#">privacy policy</a> and <a href="#">cookie policy</a>.
+        </p>
+        <button class="cookie-btn">Accept</button>
+    </div>
+
+    <div id="alert">
+        <h1>Open only with Server</h1>
+        <a href="https://bakijetishi.github.io/airportprojectJS">Click Here</a>
+    </div>
+
+    <script type="module" src="./assets/js/script.js"></script>
+</body>
+
+</html>
