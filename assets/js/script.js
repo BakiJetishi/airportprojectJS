@@ -318,19 +318,32 @@ const livechat = () => {
     }
   });
 
-  function writeMessage() {
-    const date = new Date();
-    let fixHours = date.getHours() < 10 ? '0' + date.getHours() : date.getHours();
+  const date = (date) => {
+    const calcDaysPassed = (date1, date2) =>
+      Math.round(Math.abs(date2 - date1) / (1000 * 60 * 60 * 24));
+
+    const daysPassed = calcDaysPassed(new Date(), date);
+    console.log(daysPassed);
+    let fixHours = `${date.getHours()}`.padStart(2, 0);
     let fixMinutes =
       date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes();
     let amPM = date.getHours() < 12 ? 'AM' : 'PM';
+
+    if (daysPassed === 0) return `${fixHours}:${fixMinutes} ${amPM}`
+    if (daysPassed === 1) return 'Yesterday'
+    if (daysPassed <= 7) return `${daysPassed} days ago`
+  }
+
+  const writeMessage = () => {
+    const datee = new Date();
+    const showDate = date(datee)
 
     let message = `
 		<div class="livechat-message-sent">
 			<span class="livechat-message">
 				${inputValue.value.trim()}
 			</span>
-			<span class="livechat-message-time">${fixHours}:${fixMinutes} ${amPM}</span>
+			<span class="livechat-message-time">${showDate}</span>
 		</div>
 	`;
 
@@ -340,7 +353,7 @@ const livechat = () => {
     livechatMessageContent.style.alignItems = 'center';
 
     // cart.push(inputValue.value);
-    saveMessages = [...saveMessages, { text: inputValue.value, date: { fixHours, fixMinutes, amPM } },];
+    saveMessages = [...saveMessages, { text: inputValue.value, date: datee },];
     messagesToStorage();
 
     inputValue.value = '';
@@ -349,14 +362,17 @@ const livechat = () => {
   const savedMessages = () => {
     if (saveMessages.length > 0) livechatNoMessage.style.display = 'none';
 
-    saveMessages.forEach((e) => {
+    saveMessages.forEach((e, i) => {
+      const datee = new Date(e.date);
+      const showDate = date(datee)
+
       const div = document.createElement('div');
       div.classList.add('livechat-message-sent');
       div.innerHTML = `
 			<span class="livechat-message">
 				${e.text}
 			</span>
-			<span class="livechat-message-time">${e.date.fixHours}:${e.date.fixMinutes} ${e.date.amPM}</span>
+			<span class="livechat-message-time">${showDate}</span>
 	`;
       livechatMessageContent.appendChild(div);
     });
