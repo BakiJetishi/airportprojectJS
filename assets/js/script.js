@@ -1,3 +1,5 @@
+'use strict'
+
 //////////////////////////////////////////////////////
 const alert = document.querySelector('#alert')
 addEventListener('DOMContentLoaded', () => {
@@ -323,15 +325,16 @@ const livechat = () => {
       Math.round(Math.abs(date2 - date1) / (1000 * 60 * 60 * 24));
 
     const daysPassed = calcDaysPassed(new Date(), date);
-    console.log(daysPassed);
+    // console.log(daysPassed);
     let fixHours = `${date.getHours()}`.padStart(2, 0);
-    let fixMinutes =
-      date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes();
+    let fixMinutes = `${date.getMinutes()}`.padStart(2, 0);
     let amPM = date.getHours() < 12 ? 'AM' : 'PM';
 
     if (daysPassed === 0) return `${fixHours}:${fixMinutes} ${amPM}`
     if (daysPassed === 1) return 'Yesterday'
     if (daysPassed <= 7) return `${daysPassed} days ago`
+    return new Intl.DateTimeFormat('en-US').format(date)
+
   }
 
   const writeMessage = () => {
