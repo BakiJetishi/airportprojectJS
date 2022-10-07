@@ -240,18 +240,18 @@ createCards()
 
 //Section5 slider
 const slider2 = () => {
-  const productContainers = [...document.querySelectorAll('.news-cards')],
-    nextBtn = [...document.querySelectorAll('#section5 .next-btn')],
-    prevBtn = [...document.querySelectorAll('#section5 .prev-btn')];
+  const productContainers = document.querySelectorAll('.news-cards'),
+    nextBtn = document.querySelector('#section5 .next-btn'),
+    prevBtn = document.querySelector('#section5 .prev-btn');
 
-  productContainers.forEach((item, i) => {
+  productContainers.forEach((item) => {
     let containerWidth = item.getBoundingClientRect().width;
 
-    prevBtn[i].addEventListener('click', () => {
+    prevBtn.addEventListener('click', () => {
       item.scrollLeft -= containerWidth;
     })
 
-    nextBtn[i].addEventListener('click', () => {
+    nextBtn.addEventListener('click', () => {
       item.scrollLeft += containerWidth;
     })
 
