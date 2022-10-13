@@ -798,6 +798,117 @@ footer .footer2 a:hover {
 } /* Footer END */
 
 /* ------------------------------------- */
+
+#search-btn {
+  color: #54595f;
+  font-size: 20px;
+  transition: bottom 300ms ease-out 800ms, right 300ms ease-out 800ms;
+}
+#search-btn:hover {
+  color: #5885af;
+  cursor: pointer;
+}
+#search-overlay {
+  display: none;
+  z-index: 99999;
+}
+#search-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgb(242, 242, 242, 0.9);
+}
+
+#search {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999999;
+  display: none;
+  width: 100%;
+}
+
+#search-box {
+  position: relative;
+  z-index: 999999;
+  width: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#search-form {
+  height: 60px;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  background-color: #fff;
+  overflow: hidden;
+  box-shadow: 20px 4px 20px rgb(32 54 86 / 30%);
+}
+
+#search-text {
+  font-size: 14px;
+  color: #a4a4a4;
+  border-width: 0;
+  background: transparent;
+}
+
+#search-box input[type='text'] {
+  width: 100%;
+  padding: 20px;
+  color: #a4a4a4;
+  outline: none;
+  font-size: 14px;
+}
+
+#search-text::placeholder {
+  color: #a4a4a4;
+  font-size: 12px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#search-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 60px;
+  width: 70px;
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+  line-height: 42px;
+  border-width: 0;
+  background-color: #5885af;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px -3px rgb(0 0 0 / 20%);
+  transition: 0.5s;
+}
+#search-button:hover {
+  background-color: #54595f;
+  transition: 0.5s;
+}
+#close-btn {
+  font-size: 30px;
+  position: fixed;
+  top: -44vh;
+  right: 40px;
+  color: #54595f;
+}
+#close-btn:hover {
+  color: #5885af;
+  cursor: pointer;
+}
+
+.show-search {
+  display: block !important;
+}
+
+/* ------------------ */
+
 .overlay {
   position: fixed;
   left: 0;
@@ -810,6 +921,8 @@ footer .footer2 a:hover {
   display: none;
 }
 
+/* ------------------ */
+
 .reveal--onscroll {
   transition: 1s;
 }
@@ -818,6 +931,8 @@ footer .footer2 a:hover {
   opacity: 0;
   transform: translateY(300px);
 }
+
+/* ------------------ */
 
 .line {
   height: 2px;

@@ -264,6 +264,38 @@ const slider2 = () => {
 slider2()
 addEventListener('resize', slider2);
 
+////////////////////////////////////////////////////////////
+//Search Box
+
+const searchBox = () => {
+  const searchBtn = document.querySelector('#search-btn'),
+    searchInput = document.querySelector('#search'),
+    searchOverlay = document.querySelector('#search-overlay'),
+    closeSearchBox = document.querySelector('#close-btn')
+
+  const toggleSearch = () => {
+    searchInput.classList.toggle('show-search')
+    searchOverlay.classList.toggle('show-search')
+    document.body.classList.toggle('overflow')
+  }
+
+  searchBtn.addEventListener('click', e => {
+    e.preventDefault()
+
+    toggleSearch()
+  })
+
+  searchOverlay.addEventListener('click', e => {
+    toggleSearch()
+  })
+
+  closeSearchBox.addEventListener('click', e => {
+    toggleSearch()
+  })
+}
+
+searchBox()
+
 //////////////////////////////////////////////////////////
 // Show BackToTop button onScroll
 window.onscroll = () => {
@@ -410,5 +442,3 @@ const cookie = () => {
   }, 2000);
 }
 cookie()
-
-

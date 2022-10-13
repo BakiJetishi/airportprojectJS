@@ -24,6 +24,7 @@
                         <li><a class="nav__link" href="#">Passager Guide</a></li>
                         <li><a class="nav__link" href="#">At the Airport</a></li>
                         <li><a class="nav__link" href="#">Transport & Directions</a></li>
+                        <li><i id="search-btn" class="fas fa-search"></i></li>
                     </ul>
                 </div>
                 <div class="burger">
@@ -328,6 +329,20 @@
             </div>
         </div>
     </div>
+
+    <!-- Search Popup -->
+    <div id="search">
+        <i id="close-btn" class="fa fa-times"></i>
+        <div id='search-box'>
+            <form id='search-form'>
+                <input id='search-text' name='q' placeholder='Search..' type='text' />
+                <button id='search-button' type='submit'>
+                    <span><i class="fas fa-search"></i></span>
+                </button>
+            </form>
+        </div>
+    </div>
+    <div id="search-overlay"></div>
 
     <a href="#backtotop" class="backtotop"><i class="fas fa-chevron-up"></i></a>
     <div class="copyright">
