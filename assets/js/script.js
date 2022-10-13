@@ -273,10 +273,19 @@ const searchBox = () => {
     searchOverlay = document.querySelector('#search-overlay'),
     closeSearchBox = document.querySelector('#close-btn')
 
-  const toggleSearch = () => {
+  const toggleSearch = (e) => {
     searchInput.classList.toggle('show-search')
     searchOverlay.classList.toggle('show-search')
     document.body.classList.toggle('overflow')
+
+
+    if (searchOverlay.style.animation && searchInput.style.animation) {
+      searchOverlay.style.animation = '';
+      searchInput.style.animation = '';
+    } else {
+      searchOverlay.style.animation = 'opacity .2s ease-out'
+      searchInput.style.animation = 'opacity .5s ease-out'
+    }
   }
 
   searchBtn.addEventListener('click', e => {

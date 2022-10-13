@@ -811,14 +811,12 @@ footer .footer2 a:hover {
 #search-overlay {
   display: none;
   z-index: 99999;
-}
-#search-overlay {
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgb(242, 242, 242, 0.9);
+  background: rgba(146, 146, 146, 0.8);
 }
 
 #search {
@@ -892,11 +890,11 @@ footer .footer2 a:hover {
   transition: 0.5s;
 }
 #close-btn {
-  font-size: 30px;
+  font-size: 50px;
   position: fixed;
-  top: -44vh;
-  right: 40px;
-  color: #54595f;
+  top: -45vh;
+  right: 80px;
+  color: #000000;
 }
 #close-btn:hover {
   color: #5885af;
@@ -1727,6 +1725,15 @@ footer .footer2 a:hover {
     opacity: 1;
   }
 } /* Section 1 Arrived-Departure */
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 #alert {
   position: absolute;
