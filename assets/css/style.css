@@ -39,8 +39,9 @@ header .navbar {
   width: 100%;
   z-index: 9999;
   position: relative;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.7);
   transition: 1s;
+  backdrop-filter: blur(15px);
   box-shadow: 0px 4px 5px 0px rgba(59, 59, 59, 0.45);
 }
 
@@ -75,6 +76,12 @@ header .nav__links a {
   font-size: 18px;
   color: var(--text-color);
   font-family: var(--text-font);
+}
+
+.search__btn {
+  position: absolute;
+  display: block;
+  right: 11%;
 }
 
 /* ---------------------------- */
@@ -1160,6 +1167,10 @@ footer .footer2 a:hover {
 
   header .nav__links ul li:hover::after {
     width: 0%;
+  }
+
+  .search__btn {
+    right: 20%;
   }
 
   .burger {
